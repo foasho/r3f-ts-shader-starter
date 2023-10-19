@@ -1,5 +1,5 @@
 varying vec2 vUv;
-uniform float u_time;
+uniform float uProgress;
 
 /**
  * Line関数
@@ -9,7 +9,7 @@ uniform float u_time;
  * @params col    色データ
  */
 vec4 Line(vec2 uv, float speed, float height, vec3 col){
-  uv.y += smoothstep(1., 0., abs(uv.x)) * sin(u_time * speed + uv.x * height) * .2;
+  uv.y += smoothstep(1., 0., abs(uv.x)) * sin(uProgress * speed + uv.x * height) * .2;
   return vec4(
     smoothstep(
       .06 * smoothstep(.2, .9, abs(uv.x)), 
@@ -30,7 +30,7 @@ void main() {
     float t = i / lattice; // [0, 0.25, 0.50, 0.75, 1.0]
     color += Line(
       uv, 
-      1. + t,
+      1. + t * lattice,
       4. + t, 
       vec3(
         .2 + t * .7, 
