@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
 import vertexShader from "./glsl/hello.vert";
 import fragmentShader from "./glsl/hello.frag";
 import { ShaderMaterial } from "three";
