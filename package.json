@@ -1,5 +1,5 @@
 {
-  "name": "r3f-ts-shader-starter",
+  "name": "r3f-factory-simulation",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/cannon": "^6.6.0",
     "@react-three/drei": "^9.84.0",
     "@react-three/fiber": "^8.14.2",
     "@types/three": "^0.156.0",
